@@ -1,0 +1,12 @@
+mat-dialog-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mat-snack-bar-container {
+    z-index: 9999;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }

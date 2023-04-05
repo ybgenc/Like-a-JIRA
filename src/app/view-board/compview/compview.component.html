@@ -1,0 +1,28 @@
+
+    <h2 mat-dialog-title>{{data.editMode ? 'Update Card' : 'New Card'}}</h2>
+    <mat-dialog-content>
+        <mat-form-field style="width: 100%;"> 
+            <mat-label>Header</mat-label>
+            <input  [(ngModel)]="title" matInput>
+        </mat-form-field>
+        <div *ngFor="let task of taskChecks , let i = index">
+            <mat-form-field style="width: 90%;"> 
+                <mat-label>Task {{i+1}}</mat-label>
+                <input [(ngModel)]="tasks[i]" matInput>
+            </mat-form-field>
+            <button (click)="deleteTask(i)" mat-icon-button style="width: 10%;">
+                <mat-icon>delete</mat-icon>        
+        </button>
+        </div>
+
+        <mat-dialog-actions>
+            <div>
+                <button (click)="closer()" mat-raised-button color="warn">Cancel</button>
+            </div>
+            <div>
+                <button (click)="addTask()" mat-raised-button color="basic">Add New Task</button>
+                <button (click)="add()" mat-raised-button color="primary">{{data.editMode ? 'Update' : 'Add'}}</button>
+            </div>
+        </mat-dialog-actions>
+
+    </mat-dialog-content>

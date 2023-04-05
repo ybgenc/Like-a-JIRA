@@ -1,0 +1,19 @@
+
+
+<div class="boardButton">
+    <button mat-raised-button color="accent" (click)="dialogOpener()">New Task</button>
+</div>
+<div class="mgtop">
+    <div class="delete" *ngFor="let board of boardService.boards let i=index" [routerLink]="'/view-board/'+i">
+        <div>
+            <mat-label style="color: green; font-weight: bold; margin-left: 5px;">New : </mat-label>
+            {{board.title}}
+        </div>
+    
+        <div>
+            <button mat-icon-button (click)="deleteBoard(i)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

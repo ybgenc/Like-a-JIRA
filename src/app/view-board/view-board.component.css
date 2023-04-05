@@ -1,0 +1,24 @@
+.boardButton {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    align-items: center;
+
+}
+mat-checkbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.cardContainer{
+    display: flex;
+
+}
+mat-card{
+    min-width: 500px;
+    margin: 15px;
+}
+.buttonCenter{
+    display: flex;
+    justify-content: center;
+}

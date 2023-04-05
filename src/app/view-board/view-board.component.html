@@ -1,0 +1,28 @@
+
+<div class="boardButton">
+    <div>
+    <div class="buttonCenter"><button mat-raised-button color="accent" (click)="cardOpener()">New Card</button></div>
+<mat-card *ngFor="let card of boardService.boards[boardIndex].cards; let i = index">
+    <mat-card-title>{{card.title}}</mat-card-title>
+    <mat-card-content>
+        <div>
+            <mat-checkbox *ngFor="let checkBox of card.taskCheck; let ii = index" [(ngModel)]="card.status[ii]">
+              {{checkBox}}
+            </mat-checkbox>
+          </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button (click)="updateCard(i,card)" 
+                mat-raised-button 
+                style="background-color: rgb(17, 163, 17);  
+                       color: white;
+                       margin-right: 10px;">Update
+        </button>
+        <button (click)="deleteCard(i)" 
+                mat-raised-button 
+                color="warn">Delete
+        </button>
+    </mat-card-actions>
+</mat-card>
+</div>
+</div>

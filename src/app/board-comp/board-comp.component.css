@@ -1,0 +1,20 @@
+
+.boardButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.delete{
+    margin: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    background-color:yellow;
+
+
+}
+.mgtop{
+    margin-top:40px;
+}
